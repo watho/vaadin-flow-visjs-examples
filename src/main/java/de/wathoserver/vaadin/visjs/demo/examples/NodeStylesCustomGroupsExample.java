@@ -128,7 +128,7 @@ import de.wathoserver.vaadin.visjs.network.util.Shape;
 @SuppressWarnings("serial")
 @SpringComponent
 @UIScope
-@StyleSheet("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+@StyleSheet("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
 public class NodeStylesCustomGroupsExample extends AbstractExample {
 
   private final NetworkDiagram nd;
