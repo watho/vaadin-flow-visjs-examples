@@ -7,8 +7,10 @@ import org.slf4j.LoggerFactory;
 
 import com.github.appreciated.demo.helper.view.entity.CodeExample;
 import com.github.appreciated.demo.helper.view.other.CodeExampleView;
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.splitlayout.SplitLayout;
@@ -25,14 +27,17 @@ public abstract class AbstractExampleView extends VerticalLayout {
     final Anchor anchor = new Anchor(getJsExampleUrl(), getJsExampleUrl());
     anchor.setTarget("_blank");
     final Label al = new Label("Vis.js-Demolink:");
-    add(new HorizontalLayout(al, anchor));
     final SplitLayout layout = new SplitLayout();
     layout.setOrientation(Orientation.HORIZONTAL);
-    layout.addToPrimary(exampleComponent);
-    layout.addToSecondary(new CodeExampleView(new CodeExample(exampleComponent.getClass())));
+    layout.addToPrimary(new Paragraph(getDescription()),
+        new HorizontalLayout(al, anchor),
+        new CodeExampleView(new CodeExample(exampleComponent.getClass())));
+    layout.addToSecondary(exampleComponent);
     add(layout);
     expand(layout);
   }
+
+  protected abstract Component getDescription();
 
   public abstract String getJsExampleUrl();
 }
