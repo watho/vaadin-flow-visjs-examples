@@ -15,6 +15,7 @@ import de.wathoserver.vaadin.visjs.demo.showcase.views.IntroductionView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesCircularImagesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesColorsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesCustomGroupsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesGroupsView;
 
 @SuppressWarnings("serial")
 @RoutePrefix("showcase")
@@ -35,6 +36,7 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(NodeStylesCircularImagesView.class)) //
         .add(new LeftNavigationComponent(NodeStylesColorsView.class)) //
         .add(new LeftNavigationComponent(NodeStylesCustomGroupsView.class)) //
+        .add(new LeftNavigationComponent(NodeStylesGroupsView.class)) //
         .build();
   }
 }

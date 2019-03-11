@@ -177,7 +177,7 @@ public class NodeStylesCustomGroupsExample extends AbstractExample {
             "dotsWithLabel",
             Nodes
                 .builder().withLabel("I'm a dot").withShape(Shape.dot).withColorStr("cyan").build(),
-            "mints", Nodes.builder().withColorStr("rgb(0,255,140").build(), "icons",
+            "mints", Nodes.builder().withColorStr("rgb(0,255,140)").build(), "icons",
             Nodes.builder().withShape(Shape.icon)
                 .withIcon(Icon.builder().withFace(Face.FontAwesome).withCode("\uf0c0")
                     .withSize(50)

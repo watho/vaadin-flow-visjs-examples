@@ -18,7 +18,7 @@
 		<!-- Dependencies -->
 		<vaadin.version>13.0.0</vaadin.version>
 		<app-layout-addon.version>2.0.8</app-layout-addon.version>
-		<demo-helper-view.version>2.0.7</demo-helper-view.version>
+		<demo-helper-view.version>2.0.8</demo-helper-view.version>
 		<scrolllayout.version>2.0.1</scrolllayout.version>
 		<visjs-vaadin-component.version>0.0.2</visjs-vaadin-component.version>		
 	</properties>
