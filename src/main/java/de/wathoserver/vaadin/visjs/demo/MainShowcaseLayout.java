@@ -22,6 +22,7 @@ import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesImagesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesImagesWithBordersView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesShadowsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesShapesView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesShapesWithDashedBordersView;
 
 @SuppressWarnings("serial")
 @RoutePrefix("showcase")
@@ -49,6 +50,7 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(NodeStylesImagesWithBordersView.class)) //
         .add(new LeftNavigationComponent(NodeStylesShadowsView.class)) //
         .add(new LeftNavigationComponent(NodeStylesShapesView.class)) //
+        .add(new LeftNavigationComponent(NodeStylesShapesWithDashedBordersView.class)) //
         .build();
   }
 }
