@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,27 +10,27 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.Route;
 
 import de.wathoserver.vaadin.visjs.demo.MainShowcaseLayout;
-import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesShadowsExample;
+import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesImagesExample;
 import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 
 @SuppressWarnings("serial")
-@Route(value = "nodestyles_shadows", layout = MainShowcaseLayout.class)
-@Caption("shadows")
-@Icon(VaadinIcon.SQUARE_SHADOW)
-public class NodeStylesShadowsView extends AbstractExampleView {
+@Route(value = "nodestyles_images", layout = MainShowcaseLayout.class)
+@Caption("images")
+@Icon(VaadinIcon.PAINTBRUSH)
+public class NodeStylesImagesView extends AbstractExampleView {
 
-  public NodeStylesShadowsView(@Autowired NodeStylesShadowsExample example) {
+  public NodeStylesImagesView(@Autowired NodeStylesImagesExample example) {
     super(example);
   }
 
   @Override
   public String getJsExampleUrl() {
-    return "http://visjs.org/examples/network/nodeStyles/shadows.html";
+    return "http://visjs.org/examples/network/nodeStyles/images.html";
   }
 
   @Override
   protected Component getDescription() {
-    return new Paragraph("Find the green shadow.");
+    return new Paragraph("Display nodes as images.");
   }
 
 }

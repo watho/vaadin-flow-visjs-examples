@@ -12,18 +12,24 @@ import com.vaadin.flow.router.RoutePrefix;
 
 import de.wathoserver.vaadin.visjs.demo.showcase.views.BasicUsageView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.IntroductionView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesCircularImagesView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesColorsView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesCustomGroupsView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesGroupsView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesHtmlInNodeView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesIconsView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesImagesView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesImagesWithBordersView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesShadowsView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesShapesView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesShapesWithDashedBordersView;
-import de.wathoserver.vaadin.visjs.demo.showcase.views.NodeStylesWidthHeightView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesArrowTypesView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesArrowsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesColorsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesDashesView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesSmoothView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesSmoothWorldcupView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesCircularImagesView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesColorsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesCustomGroupsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesGroupsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesHtmlInNodeView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesIconsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesImagesView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesImagesWithBordersView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesShadowsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesShapesView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesShapesWithDashedBordersView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesWidthHeightView;
 
 @SuppressWarnings("serial")
 @RoutePrefix("showcase")
@@ -34,8 +40,8 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .withTitle("Vis.js Showcase v" + MainView.RELEASE)
         .withAppMenu(
             LeftAppMenuBuilder.get().add(new LeftNavigationComponent(IntroductionView.class))
-                .add(new LeftNavigationComponent(BasicUsageView.class)).add(buildNodeStylesSubMenu())
-                .build())
+                .add(new LeftNavigationComponent(BasicUsageView.class))
+                .add(buildNodeStylesSubMenu()).add(buildEdgeStylesSubMenu()).build())
         .build());
   }
 
@@ -53,6 +59,17 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(NodeStylesShapesView.class)) //
         .add(new LeftNavigationComponent(NodeStylesShapesWithDashedBordersView.class)) //
         .add(new LeftNavigationComponent(NodeStylesWidthHeightView.class)) //
+        .build();
+  }
+
+  private Component buildEdgeStylesSubMenu() {
+    return LeftSubMenuBuilder.get("Edge styles", VaadinIcon.TRENDING_UP.create())//
+        .add(new LeftNavigationComponent(EdgeStylesArrowsView.class)) //
+        .add(new LeftNavigationComponent(EdgeStylesArrowTypesView.class)) //
+        .add(new LeftNavigationComponent(EdgeStylesColorsView.class)) //
+        .add(new LeftNavigationComponent(EdgeStylesDashesView.class)) //
+        .add(new LeftNavigationComponent(EdgeStylesSmoothView.class)) //
+        .add(new LeftNavigationComponent(EdgeStylesSmoothWorldcupView.class)) //
         .build();
   }
 }

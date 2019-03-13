@@ -33,6 +33,7 @@ public abstract class AbstractExampleView extends VerticalLayout {
         new HorizontalLayout(al, anchor),
         new CodeExampleView(new CodeExample(exampleComponent.getClass())));
     layout.addToSecondary(exampleComponent);
+    layout.setSplitterPosition(50d);
     add(layout);
     expand(layout);
   }

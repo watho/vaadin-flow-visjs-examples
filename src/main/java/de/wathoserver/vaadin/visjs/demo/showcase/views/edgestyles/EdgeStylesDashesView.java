@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,27 +10,28 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.Route;
 
 import de.wathoserver.vaadin.visjs.demo.MainShowcaseLayout;
-import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesGroupsExample;
+import de.wathoserver.vaadin.visjs.demo.examples.EdgeStylesDashesExample;
 import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 
 @SuppressWarnings("serial")
-@Route(value = "nodestyles_groups", layout = MainShowcaseLayout.class)
-@Caption("groups")
-@Icon(VaadinIcon.CLUSTER)
-public class NodeStylesGroupsView extends AbstractExampleView {
+@Route(value = "edgestyles_dashes", layout = MainShowcaseLayout.class)
+@Caption("Dashes")
+@Icon(VaadinIcon.ELLIPSIS_H)
+public class EdgeStylesDashesView extends AbstractExampleView {
 
-  public NodeStylesGroupsView(@Autowired NodeStylesGroupsExample example) {
+  public EdgeStylesDashesView(@Autowired EdgeStylesDashesExample example) {
     super(example);
   }
 
   @Override
   public String getJsExampleUrl() {
-    return "http://visjs.org/examples/network/nodeStyles/groups.html";
+    return "http://visjs.org/examples/network/edgeStyles/dashes.html";
   }
 
   @Override
   protected Component getDescription() {
-    return new Paragraph("Same styled nodes are defined through groups.");
+    return new Paragraph(
+        "Playing with dashes.");
   }
 
 }

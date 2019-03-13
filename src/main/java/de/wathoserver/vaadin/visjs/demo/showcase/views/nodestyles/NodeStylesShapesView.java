@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,23 +10,22 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.Route;
 
 import de.wathoserver.vaadin.visjs.demo.MainShowcaseLayout;
-import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesShapesWithDashedBordersExample;
+import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesShapesExample;
 import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 
 @SuppressWarnings("serial")
-@Route(value = "nodestyles_shapesWithDashedBorders", layout = MainShowcaseLayout.class)
-@Caption("dashed borders")
-@Icon(VaadinIcon.CUBES)
-public class NodeStylesShapesWithDashedBordersView extends AbstractExampleView {
+@Route(value = "nodestyles_shapes", layout = MainShowcaseLayout.class)
+@Caption("shapes")
+@Icon(VaadinIcon.CUBE)
+public class NodeStylesShapesView extends AbstractExampleView {
 
-  public NodeStylesShapesWithDashedBordersView(
-      @Autowired NodeStylesShapesWithDashedBordersExample example) {
+  public NodeStylesShapesView(@Autowired NodeStylesShapesExample example) {
     super(example);
   }
 
   @Override
   public String getJsExampleUrl() {
-    return "http://visjs.org/examples/network/nodeStyles/shapesWithDashedBorders.html";
+    return "http://visjs.org/examples/network/nodeStyles/shapes.html";
   }
 
   @Override

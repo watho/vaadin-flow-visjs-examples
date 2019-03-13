@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,27 +10,27 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.Route;
 
 import de.wathoserver.vaadin.visjs.demo.MainShowcaseLayout;
-import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesImagesExample;
+import de.wathoserver.vaadin.visjs.demo.examples.NodeStylesCustomGroupsExample;
 import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 
 @SuppressWarnings("serial")
-@Route(value = "nodestyles_images", layout = MainShowcaseLayout.class)
-@Caption("images")
-@Icon(VaadinIcon.PAINTBRUSH)
-public class NodeStylesImagesView extends AbstractExampleView {
+@Route(value = "nodestyles_customGroups", layout = MainShowcaseLayout.class)
+@Caption("custom groups")
+@Icon(VaadinIcon.USERS)
+public class NodeStylesCustomGroupsView extends AbstractExampleView {
 
-  public NodeStylesImagesView(@Autowired NodeStylesImagesExample example) {
+  public NodeStylesCustomGroupsView(@Autowired NodeStylesCustomGroupsExample example) {
     super(example);
   }
 
   @Override
   public String getJsExampleUrl() {
-    return "http://visjs.org/examples/network/nodeStyles/images.html";
+    return "http://visjs.org/examples/network/nodeStyles/customGroups.html";
   }
 
   @Override
   protected Component getDescription() {
-    return new Paragraph("Display nodes as images.");
+    return new Paragraph("We use an icon once in the DOM so the CSS for fontAwesome is loaded.");
   }
 
 }

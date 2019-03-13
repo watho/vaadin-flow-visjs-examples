@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -169,15 +169,15 @@ public class NodeStylesCustomGroupsExample extends AbstractExample {
             .withFont(Font.builder().withSize(15).withColor("#ffffff").build())//
             .withBorderWidth(2) //
             .build()) //
-        .withEdges(Edges.builder().withWidth(2).build()) //
+        .withEdges(Edges.builder().withWidth(2.0).build()) //
         .withGroups(ImmutableMap.of("diamonds",
             Nodes.builder()
                 .withColor(NodeColor.builder().withBackground("red").withBorder("white").build())
                 .withShape(Shape.diamond).build(),
             "dotsWithLabel",
             Nodes
-                .builder().withLabel("I'm a dot").withShape(Shape.dot).withColorStr("cyan").build(),
-            "mints", Nodes.builder().withColorStr("rgb(0,255,140)").build(), "icons",
+                .builder().withLabel("I'm a dot").withShape(Shape.dot).withColor("cyan").build(),
+            "mints", Nodes.builder().withColor("rgb(0,255,140)").build(), "icons",
             Nodes.builder().withShape(Shape.icon)
                 .withIcon(Icon.builder().withFace(Face.FontAwesome).withCode("\uf0c0")
                     .withSize(50)
