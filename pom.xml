@@ -6,7 +6,7 @@
 	<groupId>de.wathoserver.vaadin</groupId>
 	<artifactId>visjs-vaadin-component-examples</artifactId>
 	<name>Vis.js component demo</name>
-	<version>0.0.1</version>
+	<version>0.1.0</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -20,7 +20,7 @@
 		<app-layout-addon.version>2.0.8</app-layout-addon.version>
 		<demo-helper-view.version>2.0.8</demo-helper-view.version>
 		<scrolllayout.version>2.0.1</scrolllayout.version>
-		<visjs-vaadin-component.version>0.0.3-SNAPSHOT</visjs-vaadin-component.version>		
+		<visjs-vaadin-component.version>1.0.0-SNAPSHOT</visjs-vaadin-component.version>		
 	</properties>
 
 	<parent>
