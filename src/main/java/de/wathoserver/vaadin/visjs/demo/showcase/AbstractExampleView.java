@@ -29,9 +29,13 @@ public abstract class AbstractExampleView extends VerticalLayout {
     final Label al = new Label("Vis.js-Demolink:");
     final SplitLayout layout = new SplitLayout();
     layout.setOrientation(Orientation.HORIZONTAL);
-    layout.addToPrimary(new Paragraph(getDescription()),
-        new HorizontalLayout(al, anchor),
-        new CodeExampleView(new CodeExample(exampleComponent.getClass())));
+    if (getDescription() != null) {
+      layout.addToPrimary(new HorizontalLayout(al, anchor), new Paragraph(getDescription()),
+          new CodeExampleView(new CodeExample(exampleComponent.getClass())));
+    } else {
+      layout.addToPrimary(new HorizontalLayout(al, anchor),
+          new CodeExampleView(new CodeExample(exampleComponent.getClass())));
+    }
     layout.addToSecondary(exampleComponent);
     layout.setSplitterPosition(50d);
     add(layout);

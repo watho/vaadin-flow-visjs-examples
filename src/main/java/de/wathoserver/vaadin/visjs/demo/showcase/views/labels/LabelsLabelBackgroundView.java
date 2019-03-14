@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.labels;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,27 +10,27 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.Route;
 
 import de.wathoserver.vaadin.visjs.demo.MainShowcaseLayout;
-import de.wathoserver.vaadin.visjs.demo.examples.BasicUsageExample;
+import de.wathoserver.vaadin.visjs.demo.examples.LabelsLabelBackgroundExample;
 import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 
 @SuppressWarnings("serial")
-@Route(value = "basicUsage", layout = MainShowcaseLayout.class)
-@Caption("Basic usage")
-@Icon(VaadinIcon.BOLD)
-public class BasicUsageView extends AbstractExampleView {
+@Route(value = "labels_labelBackground", layout = MainShowcaseLayout.class)
+@Caption("Background")
+@Icon(VaadinIcon.PROGRESSBAR)
+public class LabelsLabelBackgroundView extends AbstractExampleView {
 
-  public BasicUsageView(@Autowired BasicUsageExample example) {
+  public LabelsLabelBackgroundView(@Autowired LabelsLabelBackgroundExample example) {
     super(example);
   }
 
   @Override
   public String getJsExampleUrl() {
-    return "http://visjs.org/examples/network/basicUsage.html";
+    return "http://visjs.org/examples/network/labels/labelBackground.html";
   }
 
   @Override
   protected Component getDescription() {
-    return new Paragraph("Create a simple network with some nodes and edges.");
+    return new Paragraph("Labels can have any color background.");
   }
 
 }

@@ -16,7 +16,7 @@ import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 @SuppressWarnings("serial")
 @Route(value = "nodestyles_colors", layout = MainShowcaseLayout.class)
 @Caption("colors")
-@Icon(VaadinIcon.COPYRIGHT)
+@Icon(VaadinIcon.PALETE)
 public class NodeStylesColorsView extends AbstractExampleView {
 
   public NodeStylesColorsView(@Autowired NodeStylesColorsExample example) {

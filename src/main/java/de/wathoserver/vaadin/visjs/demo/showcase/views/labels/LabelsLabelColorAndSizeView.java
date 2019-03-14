@@ -1,4 +1,4 @@
-package de.wathoserver.vaadin.visjs.demo.showcase.views;
+package de.wathoserver.vaadin.visjs.demo.showcase.views.labels;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -10,27 +10,27 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.Route;
 
 import de.wathoserver.vaadin.visjs.demo.MainShowcaseLayout;
-import de.wathoserver.vaadin.visjs.demo.examples.BasicUsageExample;
+import de.wathoserver.vaadin.visjs.demo.examples.LabelsLabelColorAndSizeExample;
 import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 
 @SuppressWarnings("serial")
-@Route(value = "basicUsage", layout = MainShowcaseLayout.class)
-@Caption("Basic usage")
-@Icon(VaadinIcon.BOLD)
-public class BasicUsageView extends AbstractExampleView {
+@Route(value = "labels_labelColorAndSize", layout = MainShowcaseLayout.class)
+@Caption("Colors and Sizes")
+@Icon(VaadinIcon.PALETE)
+public class LabelsLabelColorAndSizeView extends AbstractExampleView {
 
-  public BasicUsageView(@Autowired BasicUsageExample example) {
+  public LabelsLabelColorAndSizeView(@Autowired LabelsLabelColorAndSizeExample example) {
     super(example);
   }
 
   @Override
   public String getJsExampleUrl() {
-    return "http://visjs.org/examples/network/basicUsage.html";
+    return "http://visjs.org/examples/network/labels/labelColorAndSize.html";
   }
 
   @Override
   protected Component getDescription() {
-    return new Paragraph("Create a simple network with some nodes and edges.");
+    return new Paragraph("The style of the edges can be fully customized.");
   }
 
 }

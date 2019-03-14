@@ -16,7 +16,7 @@ import de.wathoserver.vaadin.visjs.demo.showcase.AbstractExampleView;
 @SuppressWarnings("serial")
 @Route(value = "edgestyles_colors", layout = MainShowcaseLayout.class)
 @Caption("Different colors")
-@Icon(VaadinIcon.COPYRIGHT)
+@Icon(VaadinIcon.PALETE)
 public class EdgeStylesColorsView extends AbstractExampleView {
 
   public EdgeStylesColorsView(@Autowired EdgeStylesColorsExample example) {
