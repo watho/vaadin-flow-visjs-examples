@@ -18,6 +18,13 @@ import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesColo
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesDashesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesSmoothView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesSmoothWorldcupView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelAlignmentView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelBackgroundView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelColorAndSizeView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelMarginsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelMultifontView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelMultilineTextView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelStrokeView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesCircularImagesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesColorsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesCustomGroupsView;
@@ -38,10 +45,10 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
   public MainShowcaseLayout() {
     init(AppLayoutBuilder.get(Behaviour.LEFT_RESPONSIVE)
         .withTitle("Vis.js Showcase v" + MainView.RELEASE)
-        .withAppMenu(
-            LeftAppMenuBuilder.get().add(new LeftNavigationComponent(IntroductionView.class))
-                .add(new LeftNavigationComponent(BasicUsageView.class))
-                .add(buildNodeStylesSubMenu()).add(buildEdgeStylesSubMenu()).build())
+        .withAppMenu(LeftAppMenuBuilder.get()
+            .add(new LeftNavigationComponent(IntroductionView.class))
+            .add(new LeftNavigationComponent(BasicUsageView.class)).add(buildNodeStylesSubMenu())
+            .add(buildEdgeStylesSubMenu()).add(buildLabelsSubMenu()).build())
         .build());
   }
 
@@ -70,6 +77,18 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(EdgeStylesDashesView.class)) //
         .add(new LeftNavigationComponent(EdgeStylesSmoothView.class)) //
         .add(new LeftNavigationComponent(EdgeStylesSmoothWorldcupView.class)) //
+        .build();
+  }
+
+  private Component buildLabelsSubMenu() {
+    return LeftSubMenuBuilder.get("Labels", VaadinIcon.TEXT_LABEL.create())//
+        .add(new LeftNavigationComponent(LabelsLabelAlignmentView.class)) //
+        .add(new LeftNavigationComponent(LabelsLabelBackgroundView.class)) //
+        .add(new LeftNavigationComponent(LabelsLabelColorAndSizeView.class)) //
+        .add(new LeftNavigationComponent(LabelsLabelMarginsView.class)) //
+        .add(new LeftNavigationComponent(LabelsLabelMultifontView.class)) //
+        .add(new LeftNavigationComponent(LabelsLabelStrokeView.class)) //
+        .add(new LeftNavigationComponent(LabelsLabelMultilineTextView.class)) //
         .build();
   }
 }
