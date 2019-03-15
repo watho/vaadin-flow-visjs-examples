@@ -81,7 +81,7 @@ public class MainView extends DemoHelperView {
 
   private Component createShowcaseParagraph() {
     final ImageParagraphView p = new ImageParagraphView("Vis.js examples",
-        "Tries to recreate all original Vis.js examples. Currently 26 of 61 examples are implemented.",
+        "Tries to recreate all original Vis.js examples. Currently 31 of 61 examples are implemented.",
         "frontend/img/showcase.png");
     p.getImage().getStyle().set("border", "1px gray solid");
     p.getTextWrapper()

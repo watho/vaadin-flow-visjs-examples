@@ -25,6 +25,11 @@ import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelMargins
 import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelMultifontView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelMultilineTextView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelStrokeView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.layout.LayoutHierarchicalLayoutMethodsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.layout.LayoutHierarchicalLayoutUserDefinedView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.layout.LayoutHierarchicalLayoutView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.layout.LayoutHierarchicalLayoutWithoutPhysicsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.layout.LayoutRandomSeedView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesCircularImagesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesColorsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.nodestyles.NodeStylesCustomGroupsView;
@@ -48,7 +53,8 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .withAppMenu(LeftAppMenuBuilder.get()
             .add(new LeftNavigationComponent(IntroductionView.class))
             .add(new LeftNavigationComponent(BasicUsageView.class)).add(buildNodeStylesSubMenu())
-            .add(buildEdgeStylesSubMenu()).add(buildLabelsSubMenu()).build())
+            .add(buildEdgeStylesSubMenu()).add(buildLabelsSubMenu()).add(buildLayoutSubMenu())
+            .build())
         .build());
   }
 
@@ -89,6 +95,16 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(LabelsLabelMultifontView.class)) //
         .add(new LeftNavigationComponent(LabelsLabelStrokeView.class)) //
         .add(new LeftNavigationComponent(LabelsLabelMultilineTextView.class)) //
+        .build();
+  }
+
+  private Component buildLayoutSubMenu() {
+    return LeftSubMenuBuilder.get("Layout", VaadinIcon.SITEMAP.create())//
+        .add(new LeftNavigationComponent(LayoutHierarchicalLayoutView.class)) //
+        .add(new LeftNavigationComponent(LayoutHierarchicalLayoutMethodsView.class)) //
+        .add(new LeftNavigationComponent(LayoutHierarchicalLayoutUserDefinedView.class)) //
+        .add(new LeftNavigationComponent(LayoutHierarchicalLayoutWithoutPhysicsView.class)) //
+        .add(new LeftNavigationComponent(LayoutRandomSeedView.class)) //
         .build();
   }
 }

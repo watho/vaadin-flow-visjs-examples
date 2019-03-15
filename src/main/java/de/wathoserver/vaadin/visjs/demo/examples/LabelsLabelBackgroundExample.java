@@ -1,6 +1,5 @@
 package de.wathoserver.vaadin.visjs.demo.examples;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 
@@ -53,7 +52,6 @@ import de.wathoserver.vaadin.visjs.network.util.Font;
 public class LabelsLabelBackgroundExample extends AbstractExample {
 
   private final NetworkDiagram nd;
-  ObjectMapper mapper = new ObjectMapper();
 
   public LabelsLabelBackgroundExample() {
     // Set Nodes
