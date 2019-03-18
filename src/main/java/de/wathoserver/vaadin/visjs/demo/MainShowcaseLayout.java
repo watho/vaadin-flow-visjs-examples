@@ -18,6 +18,9 @@ import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesColo
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesDashesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesSmoothView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesSmoothWorldcupView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.events.EventsInteractionEventsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.events.EventsPhysicsEventsView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.events.EventsRenderEventsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelAlignmentView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelBackgroundView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.labels.LabelsLabelColorAndSizeView;
@@ -54,7 +57,7 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
             .add(new LeftNavigationComponent(IntroductionView.class))
             .add(new LeftNavigationComponent(BasicUsageView.class)).add(buildNodeStylesSubMenu())
             .add(buildEdgeStylesSubMenu()).add(buildLabelsSubMenu()).add(buildLayoutSubMenu())
-            .build())
+            .add(buildEventsSubMenu()).build())
         .build());
   }
 
@@ -105,6 +108,17 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(LayoutHierarchicalLayoutUserDefinedView.class)) //
         .add(new LeftNavigationComponent(LayoutHierarchicalLayoutWithoutPhysicsView.class)) //
         .add(new LeftNavigationComponent(LayoutRandomSeedView.class)) //
+        .build();
+  }
+
+  private Component buildEventsSubMenu() {
+    final LeftNavigationComponent element =
+        new LeftNavigationComponent(EventsRenderEventsView.class);
+    element.setTitle(element.getText());
+    return LeftSubMenuBuilder.get("Events", VaadinIcon.BELL.create())//
+        .add(new LeftNavigationComponent(EventsInteractionEventsView.class)) //
+        .add(new LeftNavigationComponent(EventsPhysicsEventsView.class)) //
+        .add(element) //
         .build();
   }
 }
