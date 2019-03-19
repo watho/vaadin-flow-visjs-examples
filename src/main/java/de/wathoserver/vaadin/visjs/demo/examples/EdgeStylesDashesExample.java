@@ -61,7 +61,7 @@ public class EdgeStylesDashesExample extends AbstractExample {
     final Node node6 = new Node("6", "Node 6");
 
     nd = new NetworkDiagram();
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
     nd.setNodes(node1, node2, node3, node4, node5, node6);
 
     nd.setEdges( //

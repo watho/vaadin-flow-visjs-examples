@@ -94,7 +94,7 @@ public class LabelsLabelMultifontExample extends AbstractExample {
         .withEdges(Edges.builder().withFont(Font.builder().withSize(12).build())//
             .build())
         .withPhysics(Physics.builder().withEnabled(false).build()).build());
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     nd.setNodes(node1, node2, node3, node4);
 
     nd.setEdges( //

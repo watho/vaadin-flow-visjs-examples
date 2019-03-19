@@ -55,7 +55,7 @@ public class LayoutHierarchicalLayoutExample extends AbstractExample {
         .withHierarchical(HierarchicalLayout.builder().withDirection(Direction.UD).build()).build())
         .build();
     nd = new NetworkDiagram(options);
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     add(nd);
     final FormLayout fl = new FormLayout();
     add(fl);
@@ -89,7 +89,7 @@ public class LayoutHierarchicalLayoutExample extends AbstractExample {
     select.setValue(Direction.UD);
     select.addValueChangeListener(ev -> {
       options.getLayout().getHierarchicalObject().setDirection(ev.getValue());
-      nd.diagramSetOptions(options);
+      nd.setOptions(options);
     });
     fl.add(select);
     // Call native javascript from example to generate nodes and edges and add it to window.

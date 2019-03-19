@@ -69,7 +69,7 @@ public class EdgeStylesArrowsExample extends AbstractExample {
     final Node node8 = new Node("8", "Node 8");
 
     nd = new NetworkDiagram();
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
     nd.setNodes(node1, node2, node3, node4, node5, node6, node7, node8);
 
     nd.setEdges( //

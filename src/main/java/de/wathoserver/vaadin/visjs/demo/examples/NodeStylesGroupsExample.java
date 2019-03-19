@@ -160,7 +160,7 @@ public class NodeStylesGroupsExample extends AbstractExample {
             .build()) //
         .withEdges(Edges.builder().withWidth(2.0).build()) //
         .build());
-    nd.diagramSetSize("800px", "800px");
+    nd.setSize("800px", "800px");
     nd.setNodes(node0, node1, node2, node3, node4, node5, node6, node7, node8, node9, node10,
         node11, node12, node13, node14, node15, node16, node17, node18, node19, node20, node21,
         node22, node23, node24, node25, node26, node27, node28, node29);

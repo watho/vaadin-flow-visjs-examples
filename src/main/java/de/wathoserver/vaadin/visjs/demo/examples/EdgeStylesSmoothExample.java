@@ -77,7 +77,7 @@ public class EdgeStylesSmoothExample extends AbstractExample {
         .withEdges(
             Edges.builder().withSmooth(Smooth.builder().withType(Type.continuous).build()).build()) //
         .build());
-    nd.diagramSetSize("500px", "500px");
+    nd.setSize("500px", "500px");
     nd.setNodes(node1, node2, node3);
 
     nd.setEdges( //

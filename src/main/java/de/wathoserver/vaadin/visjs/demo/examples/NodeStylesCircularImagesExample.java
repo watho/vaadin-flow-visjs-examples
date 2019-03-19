@@ -104,7 +104,7 @@ public class NodeStylesCircularImagesExample extends AbstractExample {
             .withFont(Font.builder().withColor("#eeeeee").build()).build()) //
         .withEdges(Edges.builder().withColor("lightgray").build()) //
         .build());
-    nd.diagramSetSize("800px", "800px");
+    nd.setSize("800px", "800px");
     this.getStyle().set("background-color", "#333333");
 
     // Set Nodes

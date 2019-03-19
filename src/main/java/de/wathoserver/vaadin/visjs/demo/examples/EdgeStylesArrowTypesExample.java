@@ -81,7 +81,7 @@ public class EdgeStylesArrowTypesExample extends AbstractExample {
     final Node node4 = new Node("4", "D");
 
     nd = new NetworkDiagram();
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
     nd.setNodes(node1, node2, node3, node4);
 
     nd.setEdges( //

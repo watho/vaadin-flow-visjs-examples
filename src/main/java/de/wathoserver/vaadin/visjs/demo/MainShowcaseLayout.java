@@ -12,6 +12,8 @@ import com.vaadin.flow.router.RoutePrefix;
 
 import de.wathoserver.vaadin.visjs.demo.showcase.views.BasicUsageView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.IntroductionView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.dynamicdata.DynamicDataDatasetView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.dynamicdata.DynamicDataDynamicDataView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesArrowTypesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesArrowsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesColorsView;
@@ -57,7 +59,7 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
             .add(new LeftNavigationComponent(IntroductionView.class))
             .add(new LeftNavigationComponent(BasicUsageView.class)).add(buildNodeStylesSubMenu())
             .add(buildEdgeStylesSubMenu()).add(buildLabelsSubMenu()).add(buildLayoutSubMenu())
-            .add(buildEventsSubMenu()).build())
+            .add(buildEventsSubMenu()).add(buildDynamicDataSubMenu()).build())
         .build());
   }
 
@@ -119,6 +121,13 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
         .add(new LeftNavigationComponent(EventsInteractionEventsView.class)) //
         .add(new LeftNavigationComponent(EventsPhysicsEventsView.class)) //
         .add(element) //
+        .build();
+  }
+
+  private Component buildDynamicDataSubMenu() {
+    return LeftSubMenuBuilder.get("Dynamic data", VaadinIcon.EXCHANGE.create())//
+        .add(new LeftNavigationComponent(DynamicDataDatasetView.class))//
+        .add(new LeftNavigationComponent(DynamicDataDynamicDataView.class))//
         .build();
   }
 }

@@ -150,7 +150,7 @@ public class EventsInteractionEventsExample extends AbstractExample {
         .withInteraction(Interaction.builder().withHover(true).build()) //
         .withManipulation(Manipulation.builder().withEnabled(true).build()) //
         .build());
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
     nd.setNodes(node1, node2, node3, node4, node5);
     nd.setEdges("1", "3", "1", "2", "2", "4", "2", "5");
     add(nd);

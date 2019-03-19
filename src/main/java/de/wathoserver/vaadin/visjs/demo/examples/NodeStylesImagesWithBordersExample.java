@@ -107,7 +107,7 @@ public class NodeStylesImagesWithBordersExample extends AbstractExample {
             .build()) //
         .withEdges(Edges.builder().withColor("lightgray").build()) //
         .build());
-    nd.diagramSetSize("800px", "800px");
+    nd.setSize("800px", "800px");
     this.getStyle().set("background-color", "#333333");
 
     // Set Nodes

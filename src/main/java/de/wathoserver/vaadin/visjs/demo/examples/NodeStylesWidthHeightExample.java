@@ -148,7 +148,7 @@ public class NodeStylesWidthHeightExample extends AbstractExample {
             .withWidthConstraint(WidthConstraint.builder().withMaximum(200).build()).build())
         .withPhysics(Physics.builder().withEnabled(false).build())//
         .build());
-    nd.diagramSetSize("800px", "800px");
+    nd.setSize("800px", "800px");
     nd.setNodes(node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11,
         node12);
     nd.setEdges(new Edge("100", "210", "unconstrained to minimum width"),

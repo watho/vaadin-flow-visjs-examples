@@ -69,7 +69,7 @@ public class NodeStylesColorsExample extends AbstractExample {
         .withNodes(Nodes.builder().withBorderWidth(2).build()) //
         .withInteraction(Interaction.builder().withHover(true).build()) //
         .build());
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
 
     // Set Nodes
     final Node node1 = new Node("1", "html color");

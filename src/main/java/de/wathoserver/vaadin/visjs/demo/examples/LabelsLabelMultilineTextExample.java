@@ -67,7 +67,7 @@ public class LabelsLabelMultilineTextExample extends AbstractExample {
     final Node node5 = new Node("5", "Little text", Node.builder().withShape(Shape.ellipse));
 
     nd = new NetworkDiagram();
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     nd.setNodes(node1, node2, node3, node4, node5);
 
     nd.setEdges( //

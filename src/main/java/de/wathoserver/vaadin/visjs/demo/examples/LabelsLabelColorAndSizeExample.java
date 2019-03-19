@@ -74,7 +74,7 @@ public class LabelsLabelColorAndSizeExample extends AbstractExample {
     nd = new NetworkDiagram(
         Options.builder().withNodes(Nodes.builder().withShape(Shape.dot).withSize(10).build())//
             .build());
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     nd.getElement().getStyle().set("background", "#d1d1d1");
     nd.setNodes(node1, node2, node3, node4, node5);
     nd.setEdges("1", "2", "1", "3", "2", "4", "2", "5");

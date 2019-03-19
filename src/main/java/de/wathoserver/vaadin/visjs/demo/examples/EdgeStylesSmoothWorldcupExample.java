@@ -91,7 +91,7 @@ public class EdgeStylesSmoothWorldcupExample extends AbstractExample {
         .withEdges(Edges.builder().withColor(EdgeColor.builder().withInherit(true).build())
             .withWidth(0.15).withSmooth(Smooth.builder().withType(Type.continuous).build()).build()) //
         .withPhysics(Physics.builder().withEnabled(false).build()).build());
-    nd.diagramSetSize("800px", "800px");
+    nd.setSize("800px", "800px");
     // Data is set with external javascript-file. Here the variablenames are set.
     nd.setPredefinedNodesVariableName("predefinedNodes");
     nd.setPredefinedEdgesVariableName("predefinedEdges");

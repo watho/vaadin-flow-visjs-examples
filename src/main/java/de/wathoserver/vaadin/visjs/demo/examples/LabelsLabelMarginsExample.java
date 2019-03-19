@@ -75,7 +75,7 @@ public class LabelsLabelMarginsExample extends AbstractExample {
     nd = new NetworkDiagram(Options.builder().withNodes(//
         Nodes.builder().withShape(Shape.box).build()) //
         .build());
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     nd.setNodes(node1, node2, node3, node4);
     nd.setEdges( //
         new Edge("1", "2"), new Edge("2", "3"), new Edge("3", "4"));

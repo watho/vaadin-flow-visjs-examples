@@ -75,7 +75,7 @@ public class LayoutHierarchicalLayoutWithoutPhysicsExample extends AbstractExamp
             Configure.builder().withFilter("layout.hierarchical").withShowButton(false).build()) //
         .build();
     nd = new NetworkDiagram(options);
-    nd.diagramSetSize("1000px", "400px");
+    nd.setSize("1000px", "400px");
     // Data is set within largeHierarchicalDataSet.js
     nd.setPredefinedNodesVariableName("nodes");
     nd.setPredefinedEdgesVariableName("edges");

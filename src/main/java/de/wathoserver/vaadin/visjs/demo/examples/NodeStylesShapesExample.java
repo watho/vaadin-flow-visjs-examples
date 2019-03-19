@@ -108,7 +108,7 @@ public class NodeStylesShapesExample extends AbstractExample {
         .withPhysics(Physics.builder()
             .withBarnesHut(BarnesHut.builder().withGravitationalConstant(-4000).build()).build())
         .build());
-    nd.diagramSetSize("800px", "800px");
+    nd.setSize("800px", "800px");
     nd.setNodes(node1, node2, node3, node4, node5, node6, node7, node8, node9, node10, node11,
         node21, node22, node23, node24, node25, node26, node27, node28, node29, node30, node31,
         node32);

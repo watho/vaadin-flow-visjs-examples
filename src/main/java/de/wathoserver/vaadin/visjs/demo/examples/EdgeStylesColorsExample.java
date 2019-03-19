@@ -87,7 +87,7 @@ public class EdgeStylesColorsExample extends AbstractExample {
 
     nd = new NetworkDiagram(
         Options.builder().withNodes(Nodes.builder().withShape(Shape.circle).build()).build());
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
     nd.setNodes(node1, node2, node3, node4, node5, node6, node7, node8);
 
     nd.setEdges( //

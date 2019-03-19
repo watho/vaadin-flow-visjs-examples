@@ -73,7 +73,7 @@ public class LabelsLabelBackgroundExample extends AbstractExample {
             .withEdges(Edges.builder().withFont(Font.builder().withStrokeWidth(0).build())//
                 .build())
             .build());
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     nd.setNodes(node1, node2, node3, node4, node5);
 
     nd.setEdges( //

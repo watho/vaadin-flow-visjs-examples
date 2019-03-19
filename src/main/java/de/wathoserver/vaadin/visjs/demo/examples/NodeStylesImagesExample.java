@@ -75,7 +75,7 @@ public class NodeStylesImagesExample extends AbstractExample {
 
   public NodeStylesImagesExample() {
     nd = new NetworkDiagram();
-    nd.diagramSetSize("600px", "800px");
+    nd.setSize("600px", "800px");
 
     // Set Nodes
     final Set<Node> nodes = Sets.newLinkedHashSet();

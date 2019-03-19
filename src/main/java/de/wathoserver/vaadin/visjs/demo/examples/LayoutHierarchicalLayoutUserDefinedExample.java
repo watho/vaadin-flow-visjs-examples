@@ -141,7 +141,7 @@ public class LayoutHierarchicalLayoutUserDefinedExample extends AbstractExample 
         .withPhysics(Physics.builder().withEnabled(false).build()) //
         .build();
     nd = new NetworkDiagram(options);
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     nd.setNodes(nodes);
     nd.setEdges("0", "1", "0", "6", "0", "13", "0", "11", "1", "2", "2", "3", "2", "4", "3", "5",
         "1", "10", "1", "7", "2", "8", "2", "9", "3", "14", "1", "12");
@@ -157,7 +157,7 @@ public class LayoutHierarchicalLayoutUserDefinedExample extends AbstractExample 
               ? ForceDirection.vertical
               : ForceDirection.horizontal;
       options.getEdges().getSmoothObject().setForceDirection(direction);
-      nd.diagramSetOptions(options);
+      nd.setOptions(options);
     });
     add(select);
   }

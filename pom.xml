@@ -20,7 +20,8 @@
 		<app-layout-addon.version>2.0.8</app-layout-addon.version>
 		<demo-helper-view.version>2.0.8</demo-helper-view.version>
 		<scrolllayout.version>2.0.1</scrolllayout.version>
-		<visjs-vaadin-component.version>1.0.0-SNAPSHOT</visjs-vaadin-component.version>		
+		<vaadin-css-grid.version>0.8.4</vaadin-css-grid.version>
+		<visjs-vaadin-component.version>1.0.0-SNAPSHOT</visjs-vaadin-component.version>
 	</properties>
 
 	<parent>
@@ -90,6 +91,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- https://vaadin.com/directory/component/css-grid-layout -->
+		<dependency>
+			<groupId>com.github.appreciated</groupId>
+			<artifactId>vaadin-css-grid</artifactId>
+			<version>${vaadin-css-grid.version}</version>
+		</dependency>
 		<!-- https://vaadin.com/directory/component/app-layout-add-on -->
 		<dependency>
 			<groupId>com.github.appreciated</groupId>
@@ -102,7 +109,7 @@
 			<artifactId>scrolllayout</artifactId>
 			<version>${scrolllayout.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

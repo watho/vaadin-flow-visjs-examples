@@ -61,7 +61,7 @@ public class LayoutRandomSeedExample extends AbstractExample {
     nd.setNodes(new Node("1", "Node 1"), new Node("2", "Node 2"), new Node("3", "Node 3"),
         new Node("4", "Node 4"), new Node("5", "Node 5"));
     nd.setEdges("1", "3", "1", "2", "2", "4", "2", "5");
-    nd.diagramSetSize("600px", "400px");
+    nd.setSize("600px", "400px");
     add(nd);
   }
 

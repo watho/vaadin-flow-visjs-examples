@@ -61,7 +61,7 @@ public class NodeStylesHtmlInNodeExample extends AbstractExample {
         .withPhysics(Physics.builder()
             .withStabilization(Stabilization.builder().withEnabled(false).build()).build())
         .withEdges(Edges.builder().withSmooth(false).build()).build());
-    nd.diagramSetSize("600px", "600px");
+    nd.setSize("600px", "600px");
     // Set Nodes
     final Builder builder =
         Node.builder().withShape(Shape.image).withImage("frontend/img/svg/label.svg");

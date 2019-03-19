@@ -94,7 +94,7 @@ public class LayoutHierarchicalLayoutMethodsExample extends AbstractExample {
             .build())
         .build();
     nd = new NetworkDiagram(options);
-    nd.diagramSetSize("800px", "500px");
+    nd.setSize("800px", "500px");
     nd.setNodes(nodes);
     nd.setEdges("0", "1", "0", "6", "0", "13", "0", "11", "1", "2", "2", "3", "2", "4", "3", "5",
         "1", "10", "1", "7", "2", "8", "2", "9", "3", "14", "1", "12", "16", "15", "15", "17", "18",
@@ -105,7 +105,7 @@ public class LayoutHierarchicalLayoutMethodsExample extends AbstractExample {
     select.setValue(SortMethod.directed);
     select.addValueChangeListener(ev -> {
       options.getLayout().getHierarchicalObject().setSortMethod(ev.getValue());
-      nd.diagramSetOptions(options);
+      nd.setOptions(options);
     });
     add(select);
   }

@@ -205,7 +205,7 @@ public class NodeStylesIconsExample extends AbstractExample {
                             .withSize(50).withColor("#aa00ff").build())
                         .build()))
         .build());
-    ndFa.diagramSetSize("700px", "300px");
+    ndFa.setSize("700px", "300px");
     ndFa.setNodes(nodeFa1, nodeFa2, nodeFa3, nodeFa4, nodeFa5);
 
     // Set Edges
@@ -224,7 +224,7 @@ public class NodeStylesIconsExample extends AbstractExample {
                     .withColor("#aa00ff").build())
                 .build()))
         .build());
-    ndIo.diagramSetSize("700px", "300px");
+    ndIo.setSize("700px", "300px");
     ndIo.getStyle().set("border", "1px solid #444444");
     final Node nodeIo5 =
         new Node("5", "Organisation 1", Node.builder().withShape(Shape.icon).withIcon(Icon.builder()
