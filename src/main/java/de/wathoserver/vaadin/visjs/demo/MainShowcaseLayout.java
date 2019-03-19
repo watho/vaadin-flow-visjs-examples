@@ -14,6 +14,7 @@ import de.wathoserver.vaadin.visjs.demo.showcase.views.BasicUsageView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.IntroductionView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.dynamicdata.DynamicDataDatasetView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.dynamicdata.DynamicDataDynamicDataView;
+import de.wathoserver.vaadin.visjs.demo.showcase.views.dynamicdata.DynamicDataImportGephiView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesArrowTypesView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesArrowsView;
 import de.wathoserver.vaadin.visjs.demo.showcase.views.edgestyles.EdgeStylesColorsView;
@@ -128,6 +129,7 @@ public class MainShowcaseLayout extends AppLayoutRouterLayout {
     return LeftSubMenuBuilder.get("Dynamic data", VaadinIcon.EXCHANGE.create())//
         .add(new LeftNavigationComponent(DynamicDataDatasetView.class))//
         .add(new LeftNavigationComponent(DynamicDataDynamicDataView.class))//
+        .add(new LeftNavigationComponent(DynamicDataImportGephiView.class))//
         .build();
   }
 }
